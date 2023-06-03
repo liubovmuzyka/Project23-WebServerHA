@@ -1,0 +1,27 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.1'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'war'
+}
+
+group = 'com.example'
+version = '0.1.6-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+	implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+	implementation group: 'org.json', name: 'json', version: '20090211'
+	implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1'
+	implementation 'com.maxmind.geoip2:geoip2:4.0.1'
+}
+
+test {
+	useJUnitPlatform()
+}
